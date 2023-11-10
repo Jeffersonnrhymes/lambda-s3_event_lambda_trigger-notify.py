@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     """.format(eventName, bucketName, objectName)
     
     send = {"Subject": {"Data": eSubject}, "Body": {"Html": {"Data": eBody}}}
-    result = bClient.send_email(Source= "info@muraliprashanth.me", Destination= {"ToAddresses": ["INSERT YOUR EMAIL"]}, Message= send)
+    result = bClient.send_email(Source= "INSERT YOUR EMAIL", Destination= {"ToAddresses": ["INSERT YOUR EMAIL"]}, Message= send)
     
     return {
         'statusCode': 200,
